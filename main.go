@@ -9,13 +9,14 @@ import (
 	"github.com/shivgitcode/sx/internals"
 )
 
-var myFigure = figure.NewFigure("easyssh","doom",true)
+var myFigure = figure.NewFigure("sx","doom",true)
 
 func main(){
 	if len(os.Args)<=1 {
 		myFigure.Print();
-		color.Cyan("Welcome to easyssh")
-		fmt.Println("What are you waiting for just write easyssh run! That's it!")
+		color.Cyan("Welcome to sx (sshexpress)")
+		fmt.Println("List of available commands")
+		fmt.Print("\tinit\n\trun")
 		return
 	}
 	cmd := os.Args[1]

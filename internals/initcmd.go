@@ -1,7 +1,6 @@
 package internals
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"path"
@@ -20,9 +19,8 @@ func InitCmd(){
 	}
 	sshFilePath := path.Join(homeFilePath,".ssh/config")
 	finalFilePath := ""
-	inputMsg := fmt.Sprintf("Enter ssh config file path default")
 	inputPrompt := &survey.Input{
-		Message:inputMsg,
+		Message:"Enter ssh config file path default",
 		Default: sshFilePath,
 	}
 	survey.AskOne(inputPrompt,&finalFilePath)
